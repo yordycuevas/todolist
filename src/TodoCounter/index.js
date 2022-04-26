@@ -1,5 +1,6 @@
 import React from "react";
 import { TodoContext } from "../TodoContext";
+import { RiReactjsLine } from 'react-icons/ri';
 import './TodoCounter.css';
 
 function TodoCounter()  {
@@ -8,7 +9,7 @@ function TodoCounter()  {
 
 
   return(
-    <h2 className="TodoCounter">You have completed {completedTodos} of {totalTodos} TODO</h2>
+    <h2 className="TodoCounter">You have completed {completedTodos} of {totalTodos} TODO <RiReactjsLine className="emoji"/>  </h2>
     
   );
 }

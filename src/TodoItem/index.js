@@ -1,23 +1,25 @@
 import React from 'react';
+import { AiFillThunderbolt } from "react-icons/ai";
+import { BsClipboardX } from "react-icons/bs";
 import './TodoItem.css';
 
 function TodoItem(props) {
 
   return (
     <li className="TodoItem">
-      <span className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
+      <AiFillThunderbolt  className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
       onClick={props.onComplete}
       >
-        √
-      </span>
+        
+      </AiFillThunderbolt>
       <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
         {props.text}
       </p>
-      <span className="Icon Icon-delete"
+      <BsClipboardX className="Icon Icon-delete"
       onClick={props.onDelete}
       >
-        X
-      </span>
+        
+      </BsClipboardX>
     </li>
   );
 }
